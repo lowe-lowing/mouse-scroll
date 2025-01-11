@@ -3,6 +3,11 @@
   "displayName": "mouse-scroll",
   "description": "scroll by holding right-click",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowe-lowing/mouse-scroll"
+  },
+  "publisher": "lowe-lowing",
   "engines": {
     "vscode": "^1.96.0"
   },
