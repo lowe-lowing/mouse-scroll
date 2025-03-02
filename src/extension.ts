@@ -1,14 +1,11 @@
 import * as vscode from "vscode";
 import { spawn } from "child_process";
 import * as readline from "readline";
+import path from "path";
 
 export function activate(context: vscode.ExtensionContext) {
-  const mouseListener = spawn("python", [
-    "D:\\Projects_LL\\Node\\vscode extension\\mouse-scroll\\src\\mouse_listener.py",
-  ]);
-  const scrollHandler = spawn("python", [
-    "D:\\Projects_LL\\Node\\vscode extension\\mouse-scroll\\src\\scroll_handler.py",
-  ]);
+  const mouseListener = spawn("python", [path.join(__dirname, "mouse_listener.py")]);
+  const scrollHandler = spawn("python", [path.join(__dirname, "scroll_handler.py")]);
 
   let lastMousePosition: { x: number; y: number } | null = null;
   let rightClickPressed = false;
